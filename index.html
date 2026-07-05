@@ -13,144 +13,265 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Utsav Shah — Principal Technology Developer</title>
-    <meta name="description" content="Utsav Shah — Principal Technology Developer at Aviva. 12+ years building scalable, distributed systems with Java, AWS and Kafka.">
+    <title>Utsav Shah - Principal Technology Developer</title>
+    <meta name="description" content="Utsav Shah - Principal Technology Developer at Aviva. 12+ years building scalable, distributed systems with Java, AWS and Kafka.">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
         :root {
-            --text: #1a1a1a;
-            --muted: #666;
-            --accent: #1f76b1;
-            --line: #e5e5e5;
-            --bg: #ffffff;
+            --ink: #1e2532;
+            --muted: #5b6472;
+            --accent: #2b50e2;
+            --accent-soft: #eaefff;
+            --line: #e5e8ef;
+            --card: #ffffff;
+            --card-alt: #f8f9fc;
+            --pill: #f1f3f8;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: var(--text);
-            background: var(--bg);
-            line-height: 1.6;
-            font-size: 17px;
-        }
+        html { scroll-behavior: smooth; }
 
-        main {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 0 24px;
+        body {
+            font-family: "JetBrains Mono", Consolas, "Courier New", monospace;
+            color: var(--ink);
+            background: #fff;
+            line-height: 1.7;
+            font-size: 16px;
         }
 
         a { color: var(--accent); text-decoration: none; }
         a:hover { text-decoration: underline; }
 
         nav {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 20px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            justify-content: center;
+            gap: 36px;
+            padding: 18px 24px;
             font-size: 15px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
         }
 
-        nav a { color: var(--muted); }
+        nav a { color: var(--ink); }
         nav a:hover { color: var(--accent); text-decoration: none; }
 
-        section { padding: 48px 0; border-top: 1px solid var(--line); }
-
-        h1 { font-size: 2.2em; font-weight: 700; letter-spacing: -0.02em; }
-
-        h2 {
-            font-size: 1.15em;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--muted);
-            margin-bottom: 28px;
-        }
-
-        h3 { font-size: 1.1em; font-weight: 600; }
-
         .hero {
-            padding: 72px 0 56px;
-            border-top: none;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 32px;
+            background: linear-gradient(135deg, #dfe6ff 0%, #f0f3ff 45%, #ffffff 100%);
+            padding: 110px 24px 130px;
+            margin-top: -60px;
         }
 
-        .hero-art { width: 160px; height: 160px; flex-shrink: 0; }
-        .hero .title { font-size: 1.3em; color: var(--muted); margin: 8px 0 4px; }
-        .hero .location { color: var(--muted); font-size: 0.95em; }
-        .hero p.tagline { margin: 20px 0 28px; max-width: 560px; }
+        .hero-inner { max-width: 1100px; margin: 0 auto; }
+
+        .hero .hello {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 800;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 7.5vw, 84px);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            margin: 10px 0 18px;
+        }
+
+        .hero h1 span { color: var(--accent); }
+
+        .hero .subtitle { color: var(--muted); font-size: clamp(16px, 2vw, 20px); }
+
+        .hero .social {
+            display: flex;
+            gap: 22px;
+            margin-top: 36px;
+            align-items: center;
+            font-size: 24px;
+        }
+
+        .hero .social a { color: var(--ink); }
+        .hero .social a:hover { color: var(--accent); text-decoration: none; }
 
         .btn {
             display: inline-block;
-            padding: 10px 22px;
-            border: 1.5px solid var(--accent);
-            border-radius: 4px;
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 0.95em;
+            margin-top: 36px;
+            padding: 12px 26px;
+            background: var(--ink);
+            color: #fff;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
         }
 
         .btn:hover { background: var(--accent); color: #fff; text-decoration: none; }
 
-        .job { margin-bottom: 36px; }
-        .job:last-child { margin-bottom: 0; }
-        .job .meta { color: var(--muted); font-size: 0.9em; margin-bottom: 8px; }
-        .job ul, .plain-list { margin: 8px 0 0 20px; }
-        .job li, .plain-list li { margin-bottom: 6px; }
+        section { padding: 90px 24px; }
+        section:nth-of-type(even) { background: var(--card-alt); }
 
-        .skill-group { margin-bottom: 12px; }
-        .skill-group strong { font-weight: 600; }
-
-        footer {
-            max-width: 700px;
+        .section-grid {
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 32px 24px 48px;
-            border-top: 1px solid var(--line);
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 12px;
-            color: var(--muted);
-            font-size: 0.9em;
+            display: grid;
+            grid-template-columns: minmax(220px, 1fr) 2fr;
+            gap: 48px;
+            align-items: start;
         }
 
-        footer .social { display: flex; gap: 16px; }
+        .section-grid h2 {
+            font-size: clamp(38px, 6vw, 64px);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            position: sticky;
+            top: 90px;
+        }
+
+        .section-grid h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 6px;
+            margin-top: 12px;
+            background: var(--accent);
+            border-radius: 3px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 28px 30px;
+            margin-bottom: 28px;
+        }
+
+        .card:last-child { margin-bottom: 0; }
+
+        .card h3 { font-size: 19px; font-weight: 700; }
+        .card .company { color: var(--accent); font-size: 15px; margin-bottom: 10px; }
+        .card .when { float: right; color: var(--muted); font-size: 13px; margin-left: 16px; }
+        .card ul { margin: 8px 0 0 20px; }
+        .card li { margin-bottom: 8px; font-size: 14.5px; color: #333a46; }
+        .card p { font-size: 14.5px; color: #333a46; }
+
+        .card .num { color: var(--accent); font-size: 13px; font-weight: 700; }
+
+        .card .go {
+            float: right;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--ink);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+        }
+
+        .card .go:hover { background: var(--accent); text-decoration: none; }
+
+        .timeline { position: relative; }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--line);
+        }
+
+        .timeline .card { position: relative; z-index: 1; }
+
+        .timeline .card::before {
+            content: "";
+            position: absolute;
+            top: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .timeline .card:first-child::before { top: -8px; }
+
+        .pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+
+        .pill {
+            background: var(--pill);
+            border: 1px solid var(--line);
+            padding: 7px 18px;
+            border-radius: 999px;
+            font-size: 13.5px;
+        }
+
+        .pill-label { font-size: 13px; color: var(--muted); margin: 22px 0 0; }
 
         form input, form textarea {
             width: 100%;
-            padding: 12px;
-            margin-bottom: 12px;
+            padding: 14px;
+            margin-bottom: 14px;
             border: 1px solid var(--line);
-            border-radius: 4px;
+            border-radius: 8px;
             font: inherit;
+            font-size: 14px;
+            background: #fff;
         }
 
-        form textarea { min-height: 120px; resize: vertical; }
+        form textarea { min-height: 140px; resize: vertical; }
 
         form button {
-            padding: 10px 28px;
-            background: var(--accent);
+            padding: 12px 30px;
+            background: var(--ink);
             color: #fff;
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             font: inherit;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 14px;
             cursor: pointer;
         }
 
-        form button:hover { opacity: 0.9; }
+        form button:hover { background: var(--accent); }
 
-        @media (max-width: 600px) {
-            body { font-size: 16px; }
-            .hero { padding: 48px 0 40px; }
-            .hero-art { display: none; }
+        footer { background: var(--card-alt); border-top: 1px solid var(--line); padding: 48px 24px; }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-inner .name { font-size: 20px; font-weight: 700; }
+        .footer-inner .sub { color: var(--muted); font-size: 14px; }
+        .footer-inner .social { display: flex; gap: 18px; margin-top: 14px; font-size: 20px; }
+        .footer-inner .social a { color: var(--ink); }
+        .footer-inner .social a:hover { color: var(--accent); }
+        .footer-right { text-align: right; font-size: 13.5px; color: var(--muted); }
+        .footer-right .links { display: flex; gap: 24px; justify-content: flex-end; margin-bottom: 8px; }
+        .footer-right .links a { color: var(--ink); }
+
+        @media (max-width: 760px) {
+            .section-grid { grid-template-columns: 1fr; gap: 28px; }
+            .section-grid h2 { position: static; }
+            .timeline::before { left: 8px; }
+            .timeline .card::before { left: 8px; }
+            .footer-right { text-align: left; }
+            .footer-right .links { justify-content: flex-start; }
         }
     </style>
 </head>
@@ -159,207 +280,218 @@
     <nav>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
         <a href="#education">Education</a>
         <a href="#research">Research</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <main>
-        <section class="hero">
-            <div class="hero-text">
-                <h1>Utsav Shah</h1>
-                <p class="title">Principal Technology Developer</p>
-                <p class="location">Aviva · Birmingham, United Kingdom</p>
-                <p class="tagline">
-                    I design and deliver scalable, distributed systems — and keep them simple.
-                    12+ years across insurance, enterprise software and logistics, focused on
-                    outcomes that matter to customers.
-                </p>
-                <a href="Utsav-Shah-Resume.pdf" class="btn">Download Resume</a>
+    <header class="hero">
+        <div class="hero-inner">
+            <p class="hello">Hello! &#128075;</p>
+            <h1>I'm <span>Utsav Shah</span></h1>
+            <p class="subtitle">Principal Technology Developer &middot; Aviva &middot; Birmingham, UK</p>
+            <div class="social">
+                <a href="mailto:utsavpshah@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/utsavshah01/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/utsavpshah" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://twitter.com/utsavpshah" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/utsavpshah" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
             </div>
-            <svg class="hero-art" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <!-- minimalist constellation: systems in orbit -->
-                <defs>
-                    <linearGradient id="ga" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0" stop-color="#1f76b1"/>
-                        <stop offset="1" stop-color="#2ab3a6"/>
-                    </linearGradient>
-                </defs>
-                <circle cx="100" cy="100" r="86" fill="none" stroke="#ebebeb" stroke-width="1"/>
-                <circle cx="100" cy="100" r="60" fill="none" stroke="#f1f1f1" stroke-width="1" stroke-dasharray="3 5"/>
-                <g fill="none" stroke="url(#ga)" stroke-width="1.3" opacity="0.55">
-                    <path d="M100 100 Q75 82 52 72"/>
-                    <path d="M100 100 Q128 70 148 52"/>
-                    <path d="M100 100 Q142 118 164 112"/>
-                    <path d="M100 100 Q92 140 68 156"/>
-                    <path d="M52 72 Q95 45 148 52"/>
-                    <path d="M164 112 Q130 150 68 156"/>
-                </g>
-                <circle cx="100" cy="100" r="11" fill="url(#ga)"/>
-                <circle cx="100" cy="100" r="17" fill="none" stroke="url(#ga)" stroke-width="1" opacity="0.35"/>
-                <circle cx="52" cy="72" r="6" fill="#fff" stroke="url(#ga)" stroke-width="1.6"/>
-                <circle cx="148" cy="52" r="7" fill="url(#ga)" opacity="0.85"/>
-                <circle cx="164" cy="112" r="5" fill="#fff" stroke="url(#ga)" stroke-width="1.6"/>
-                <circle cx="68" cy="156" r="6" fill="url(#ga)" opacity="0.7"/>
-                <circle cx="140" cy="160" r="2.5" fill="url(#ga)" opacity="0.4"/>
-                <circle cx="40" cy="128" r="2.5" fill="url(#ga)" opacity="0.4"/>
-                <circle cx="120" cy="26" r="2" fill="url(#ga)" opacity="0.35"/>
-            </svg>
-        </section>
+            <a href="Utsav-Shah-Resume.pdf" class="btn">Download Resume</a>
+        </div>
+    </header>
 
-        <section id="about">
+    <section id="about">
+        <div class="section-grid">
             <h2>About</h2>
-            <p>
-                I'm a Principal Technology Developer at Aviva, where I lead solution architecture
-                for customer-facing insurance platforms serving 750,000+ users. My background is
-                in Java, AWS and event-driven systems (Kafka), with deep experience in identity,
-                integration and cloud modernization.
-            </p>
-            <br>
-            <p>
-                I believe good engineering is minimal engineering: fewer services, clearer designs,
-                lower costs. I measure my work by what it does for customers — reliable journeys,
-                secure access, systems that just work. Along the way I coach engineers, champion
-                AI-assisted development, and run community sessions on architecture and cloud practices.
-            </p>
-        </section>
-
-        <section id="experience">
-            <h2>Experience</h2>
-
-            <div class="job">
-                <h3>Principal Technology Developer · Aviva</h3>
-                <p class="meta">Jul 2026 – Present · Birmingham, UK</p>
-                <ul>
-                    <li>Continuing solution architecture leadership across digital insurance platforms following Aviva's acquisition of Direct Line Group.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>Principal Engineer · Direct Line Group</h3>
-                <p class="meta">Feb 2024 – Jun 2026 · Birmingham, UK</p>
-                <ul>
-                    <li>Solution architecture leadership across customer-facing insurance platforms serving 750,000+ users.</li>
-                    <li>Led architecture and delivery of cross-platform integration initiatives — SSO, reusable integration patterns and unified customer access journeys.</li>
-                    <li>Delivered ~£150k year-on-year AWS cost savings through environment consolidation and rationalizing 40 services down to 10.</li>
-                    <li>Championed AI-assisted engineering across digital teams and embedded security controls (Dependabot, SonarCloud, signed commits) into CI/CD.</li>
-                    <li>Consistently awarded the organization's highest performance rating: "Sets a New Standard".</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>Lead Software Engineer · GlobalLogic</h3>
-                <p class="meta">Jan 2021 – Jan 2024 · Pune, India & Krakow, Poland</p>
-                <ul>
-                    <li>Delivered Single Sign-On across enterprise products using Spring Boot and Kubernetes.</li>
-                    <li>Cut user-migration processing time by 80% through batch transaction redesign.</li>
-                    <li>Led release management across teams — deployment planning, rollback strategy and service readiness.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>Technical Lead · PTC Inc.</h3>
-                <p class="meta">Feb 2017 – Apr 2020 · Pune, India</p>
-                <ul>
-                    <li>Led design and development of VM provisioning and order-processing microservices with Spring Boot, Hibernate and MySQL.</li>
-                    <li>Built a user activity data warehouse microservice, improving query execution by ~90%.</li>
-                    <li>Developed a Redis-backed license management service, improving login performance by 25%.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>Senior Software Engineer · Infosys</h3>
-                <p class="meta">Jun 2014 – Feb 2017 · Pune, India</p>
-                <ul>
-                    <li>Led a team of five building an event-driven fleet management platform with live ship tracking, using Apache Kafka, Google Maps, Spring MVC and PostgreSQL.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skill-group"><strong>Cloud & Infrastructure:</strong> AWS (ECS, Lambda, S3, CloudWatch), Kubernetes, Docker, cloud-native design, cost optimization</div>
-            <div class="skill-group"><strong>Engineering:</strong> Java, Spring Boot, Python, Angular, Kafka, Redis, MySQL, PostgreSQL</div>
-            <div class="skill-group"><strong>Architecture:</strong> Microservices, event-driven architecture, distributed systems, integration design, security architecture</div>
-            <div class="skill-group"><strong>DevOps & Security:</strong> GitHub Actions, CI/CD, Dependabot, SonarCloud, identity & access management</div>
-            <div class="skill-group"><strong>Leadership:</strong> Technical strategy, architecture reviews, mentoring, Agile delivery (Scrum, XP)</div>
-        </section>
-
-        <section id="education">
-            <h2>Education & Certifications</h2>
-            <div class="job">
-                <h3>B.Tech in Instrumentation and Control</h3>
-                <p class="meta">Nirma Institute of Technology, Ahmedabad · 2010 – 2014</p>
-            </div>
-            <div class="job">
-                <h3>Certifications</h3>
-                <ul>
-                    <li>AWS Certified Cloud Practitioner</li>
-                    <li>Cloud Sustainability Fundamentals (GreenOps, Greenpixie)</li>
-                    <li>AI & Career Empowerment — University of Maryland, Robert H. Smith School of Business</li>
-                    <li>Succeeding as a Senior Manager — LinkedIn Learning</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="research">
-            <h2>Research & Publications</h2>
-            <div class="job">
-                <h3><a href="https://www.packtpub.com/hardware-and-creative/arduino-blink-blueprints" target="_blank" rel="noopener">Arduino BLINK Blueprints</a></h3>
-                <p class="meta">Packt Publishing · 2016</p>
-                <p>A hands-on book on developing creative LED-based projects with Arduino.</p>
-            </div>
-            <div class="job">
-                <h3>Speaking Hands — Idea Lab, Nirma University</h3>
-                <p class="meta">2013 – 2014</p>
+            <div>
                 <p>
-                    Converts sign language to speech using artificial neural networks and
-                    Google Text-to-Speech. Covered by
-                    <a href="https://yourstory.com/2014/05/leap-motion" target="_blank" rel="noopener">YourStory</a> and
-                    <a href="https://ahmedabadmirror.indiatimes.com/ahmedabad/cover-story//articleshow/35671406.cms" target="_blank" rel="noopener">Ahmedabad Mirror</a>.
+                    I'm a Principal Technology Developer at Aviva, where I lead solution architecture
+                    for customer-facing insurance platforms serving 750,000+ users. My background is
+                    in Java, AWS and event-driven systems, with deep experience in identity,
+                    integration and cloud modernization.
                 </p>
+                <br>
+                <p>
+                    I believe good engineering is minimal engineering: fewer services, clearer designs,
+                    lower costs. I measure my work by what it does for customers &mdash; reliable journeys,
+                    secure access, systems that just work. Along the way I coach engineers, champion
+                    AI-assisted development, and run community sessions on architecture and cloud practices.
+                </p>
+                <div class="pills">
+                    <span class="pill">Java</span>
+                    <span class="pill">Spring Boot</span>
+                    <span class="pill">AWS</span>
+                    <span class="pill">Kafka</span>
+                    <span class="pill">Kubernetes</span>
+                    <span class="pill">Python</span>
+                    <span class="pill">Microservices</span>
+                    <span class="pill">Event-driven architecture</span>
+                </div>
+                <p class="pill-label">Also: Redis, MySQL, PostgreSQL, Angular, GitHub Actions, CI/CD, IAM, Agile (Scrum/XP)</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="exploration">
-            <h2>Exploration</h2>
-            <ul class="plain-list">
-                <li><a href="https://www.youtube.com/watch?v=Nqp0mTyjVC8" target="_blank" rel="noopener">Predictive Maintenance</a> using Intel Edison and Node.js with enableiot Cloud</li>
-                <li>Visual Jenkins build status using Arduino and Python</li>
-                <li>Low-cost 3D-printed prosthetic arm — active development contributor</li>
-                <li><a href="https://www.youtube.com/watch?v=3fAmF3pJMX4" target="_blank" rel="noopener">AndroArm</a> — Android app controlling a robotic arm over Bluetooth</li>
-                <li><a href="https://www.youtube.com/watch?v=DWDsWiCLcS0" target="_blank" rel="noopener">Shadow Arm</a> — robotic arm mirroring human hand movement via Leap Motion</li>
-                <li><a href="https://www.youtube.com/watch?v=8pJyDtg7hNM" target="_blank" rel="noopener">Smart Learning System</a> using Python and PHP on Raspberry Pi with Makey Makey</li>
-                <li><a href="https://www.youtube.com/watch?v=_EdzMGvUjpQ" target="_blank" rel="noopener">Gesture-Controlled Robotic Arm</a> using image processing in MATLAB</li>
-            </ul>
-        </section>
+    <section id="experience">
+        <div class="section-grid">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="card">
+                    <span class="when">Jul 2026 - Present</span>
+                    <h3>Principal Technology Developer</h3>
+                    <p class="company">Aviva &middot; Birmingham, UK</p>
+                    <ul>
+                        <li>Continuing solution architecture leadership across digital insurance platforms following Aviva's acquisition of Direct Line Group.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="when">Feb 2024 - Jun 2026</span>
+                    <h3>Principal Engineer</h3>
+                    <p class="company">Direct Line Group &middot; Birmingham, UK</p>
+                    <ul>
+                        <li>Solution architecture leadership across customer-facing insurance platforms serving 750,000+ users.</li>
+                        <li>Led architecture and delivery of cross-platform integration initiatives &mdash; SSO, reusable integration patterns and unified customer access journeys.</li>
+                        <li>Delivered ~&pound;150k year-on-year AWS cost savings through environment consolidation and rationalizing 40 services down to 10.</li>
+                        <li>Championed AI-assisted engineering across digital teams and embedded security controls (Dependabot, SonarCloud, signed commits) into CI/CD.</li>
+                        <li>Consistently awarded the organization's highest performance rating: "Sets a New Standard".</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="when">Jan 2021 - Jan 2024</span>
+                    <h3>Lead Software Engineer</h3>
+                    <p class="company">GlobalLogic &middot; Pune, India &amp; Krakow, Poland</p>
+                    <ul>
+                        <li>Delivered Single Sign-On across enterprise products using Spring Boot and Kubernetes.</li>
+                        <li>Cut user-migration processing time by 80% through batch transaction redesign.</li>
+                        <li>Led release management across teams &mdash; deployment planning, rollback strategy and service readiness.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="when">Feb 2017 - Apr 2020</span>
+                    <h3>Technical Lead</h3>
+                    <p class="company">PTC Inc. &middot; Pune, India</p>
+                    <ul>
+                        <li>Led design and development of VM provisioning and order-processing microservices with Spring Boot, Hibernate and MySQL.</li>
+                        <li>Built a user activity data warehouse microservice, improving query execution by ~90%.</li>
+                        <li>Developed a Redis-backed license management service, improving login performance by 25%.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="when">Jun 2014 - Feb 2017</span>
+                    <h3>Senior Software Engineer</h3>
+                    <p class="company">Infosys &middot; Pune, India</p>
+                    <ul>
+                        <li>Led a team of five building an event-driven fleet management platform with live ship tracking, using Apache Kafka, Google Maps, Spring MVC and PostgreSQL.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="contact">
+    <section id="education">
+        <div class="section-grid">
+            <h2>Education</h2>
+            <div>
+                <div class="card">
+                    <span class="when">2010 - 2014</span>
+                    <h3>B.Tech in Instrumentation and Control</h3>
+                    <p class="company">Nirma Institute of Technology, Ahmedabad</p>
+                </div>
+                <div class="card">
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li>AWS Certified Cloud Practitioner</li>
+                        <li>Cloud Sustainability Fundamentals (GreenOps, Greenpixie)</li>
+                        <li>AI &amp; Career Empowerment &mdash; University of Maryland, Robert H. Smith School of Business</li>
+                        <li>Succeeding as a Senior Manager &mdash; LinkedIn Learning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research">
+        <div class="section-grid">
+            <h2>Research</h2>
+            <div>
+                <div class="card">
+                    <a class="go" href="https://www.packtpub.com/hardware-and-creative/arduino-blink-blueprints" target="_blank" rel="noopener" aria-label="View book"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <p class="num">01</p>
+                    <h3>Arduino BLINK Blueprints</h3>
+                    <p class="company">Packt Publishing &middot; 2016</p>
+                    <p>A hands-on book on developing creative LED-based projects with Arduino.</p>
+                </div>
+                <div class="card">
+                    <a class="go" href="https://yourstory.com/2014/05/leap-motion" target="_blank" rel="noopener" aria-label="Read coverage"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <p class="num">02</p>
+                    <h3>Speaking Hands</h3>
+                    <p class="company">Idea Lab, Nirma University &middot; 2013 - 2014</p>
+                    <p>
+                        Converts sign language to speech using artificial neural networks and Google
+                        Text-to-Speech. Covered by YourStory and
+                        <a href="https://ahmedabadmirror.indiatimes.com/ahmedabad/cover-story//articleshow/35671406.cms" target="_blank" rel="noopener">Ahmedabad Mirror</a>.
+                    </p>
+                </div>
+                <div class="card">
+                    <p class="num">03</p>
+                    <h3>Exploration</h3>
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=Nqp0mTyjVC8" target="_blank" rel="noopener">Predictive Maintenance</a> using Intel Edison and Node.js with enableiot Cloud</li>
+                        <li>Visual Jenkins build status using Arduino and Python</li>
+                        <li>Low-cost 3D-printed prosthetic arm &mdash; active development contributor</li>
+                        <li><a href="https://www.youtube.com/watch?v=3fAmF3pJMX4" target="_blank" rel="noopener">AndroArm</a> &mdash; Android app controlling a robotic arm over Bluetooth</li>
+                        <li><a href="https://www.youtube.com/watch?v=DWDsWiCLcS0" target="_blank" rel="noopener">Shadow Arm</a> &mdash; robotic arm mirroring human hand movement via Leap Motion</li>
+                        <li><a href="https://www.youtube.com/watch?v=8pJyDtg7hNM" target="_blank" rel="noopener">Smart Learning System</a> using Python and PHP on Raspberry Pi with Makey Makey</li>
+                        <li><a href="https://www.youtube.com/watch?v=_EdzMGvUjpQ" target="_blank" rel="noopener">Gesture-Controlled Robotic Arm</a> using image processing in MATLAB</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-grid">
             <h2>Contact</h2>
-            <p style="margin-bottom: 20px;">Have a question or want to work together? Drop me a message.</p>
-            <form method="POST" action="https://formspree.io/mbjzjrop" id="form">
-                <input type="hidden" name="_subject" value="Contact request from personal website">
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button id="submit" type="submit">Send</button>
-                <p id="form-status"></p>
-            </form>
-        </section>
-    </main>
+            <div class="card">
+                <p style="margin-bottom: 20px;">Have a question or want to work together? Drop me a message.</p>
+                <form method="POST" action="https://formspree.io/mbjzjrop" id="form">
+                    <input type="hidden" name="_subject" value="Contact request from personal website">
+                    <input type="email" name="_replyto" placeholder="Your email" required>
+                    <textarea name="message" placeholder="Your message" required></textarea>
+                    <button id="submit" type="submit">Send message</button>
+                    <p id="form-status"></p>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <span>&copy; 2026 Utsav Shah</span>
-        <span class="social">
-            <a href="https://github.com/utsavpshah" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/utsavshah01/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://www.facebook.com/utsavpshah" target="_blank" rel="noopener">Facebook</a>
-            <a href="https://twitter.com/utsavpshah" target="_blank" rel="noopener">Twitter</a>
-        </span>
+        <div class="footer-inner">
+            <div>
+                <p class="name">Utsav Shah</p>
+                <p class="sub">Principal Technology Developer</p>
+                <div class="social">
+                    <a href="mailto:utsavpshah@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/utsavshah01/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/utsavpshah" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://twitter.com/utsavpshah" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/utsavpshah" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="links">
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#education">Education</a>
+                    <a href="#research">Research</a>
+                </div>
+                <p>&copy; 2026 Utsav Shah. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <script>
-        // AJAX submit for the contact form
         var form = document.getElementById("form");
         form.addEventListener("submit", function (e) {
             e.preventDefault();
@@ -371,7 +503,7 @@
                 headers: { "Accept": "application/json" }
             }).then(function (response) {
                 if (response.ok) {
-                    status.textContent = "Thanks — your message has been sent.";
+                    status.textContent = "Thanks - your message has been sent.";
                     form.reset();
                 } else {
                     status.textContent = "Something went wrong. Please email me directly.";
