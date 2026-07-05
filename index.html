@@ -13,8 +13,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Utsav Shah — Principal Engineer</title>
-    <meta name="description" content="Utsav Shah — Principal Engineer at Direct Line Group. 11+ years building scalable, distributed systems with Java, AWS and Kafka.">
+    <title>Utsav Shah — Principal Technology Developer</title>
+    <meta name="description" content="Utsav Shah — Principal Technology Developer at Aviva. 12+ years building scalable, distributed systems with Java, AWS and Kafka.">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <style>
@@ -73,7 +73,16 @@
 
         h3 { font-size: 1.1em; font-weight: 600; }
 
-        .hero { padding: 72px 0 56px; border-top: none; }
+        .hero {
+            padding: 72px 0 56px;
+            border-top: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+        }
+
+        .hero-art { width: 160px; height: 160px; flex-shrink: 0; }
         .hero .title { font-size: 1.3em; color: var(--muted); margin: 8px 0 4px; }
         .hero .location { color: var(--muted); font-size: 0.95em; }
         .hero p.tagline { margin: 20px 0 28px; max-width: 560px; }
@@ -141,6 +150,7 @@
         @media (max-width: 600px) {
             body { font-size: 16px; }
             .hero { padding: 48px 0 40px; }
+            .hero-art { display: none; }
         }
     </style>
 </head>
@@ -157,21 +167,42 @@
 
     <main>
         <section class="hero">
-            <h1>Utsav Shah</h1>
-            <p class="title">Principal Engineer</p>
-            <p class="location">Birmingham, United Kingdom</p>
-            <p class="tagline">
-                I design and deliver scalable, distributed systems — and keep them simple.
-                11+ years across insurance, enterprise software and logistics, focused on
-                outcomes that matter to customers.
-            </p>
-            <a href="Utsav-Shah-Resume.pdf" class="btn">Download Resume</a>
+            <div class="hero-text">
+                <h1>Utsav Shah</h1>
+                <p class="title">Principal Technology Developer</p>
+                <p class="location">Aviva · Birmingham, United Kingdom</p>
+                <p class="tagline">
+                    I design and deliver scalable, distributed systems — and keep them simple.
+                    12+ years across insurance, enterprise software and logistics, focused on
+                    outcomes that matter to customers.
+                </p>
+                <a href="Utsav-Shah-Resume.pdf" class="btn">Download Resume</a>
+            </div>
+            <svg class="hero-art" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- minimalist distributed-system motif -->
+                <g fill="none" stroke="#1f76b1" stroke-width="1.5">
+                    <line x1="100" y1="100" x2="40" y2="40" opacity="0.35"/>
+                    <line x1="100" y1="100" x2="160" y2="40" opacity="0.35"/>
+                    <line x1="100" y1="100" x2="40" y2="160" opacity="0.35"/>
+                    <line x1="100" y1="100" x2="160" y2="160" opacity="0.35"/>
+                    <line x1="40" y1="40" x2="160" y2="40" opacity="0.15"/>
+                    <line x1="40" y1="160" x2="160" y2="160" opacity="0.15"/>
+                    <line x1="40" y1="40" x2="40" y2="160" opacity="0.15"/>
+                    <line x1="160" y1="40" x2="160" y2="160" opacity="0.15"/>
+                    <circle cx="100" cy="100" r="14"/>
+                    <circle cx="40" cy="40" r="8" opacity="0.6"/>
+                    <circle cx="160" cy="40" r="8" opacity="0.6"/>
+                    <circle cx="40" cy="160" r="8" opacity="0.6"/>
+                    <circle cx="160" cy="160" r="8" opacity="0.6"/>
+                </g>
+                <circle cx="100" cy="100" r="4" fill="#1f76b1"/>
+            </svg>
         </section>
 
         <section id="about">
             <h2>About</h2>
             <p>
-                I'm a Principal Engineer at Direct Line Group, where I lead solution architecture
+                I'm a Principal Technology Developer at Aviva, where I lead solution architecture
                 for customer-facing insurance platforms serving 750,000+ users. My background is
                 in Java, AWS and event-driven systems (Kafka), with deep experience in identity,
                 integration and cloud modernization.
@@ -189,8 +220,16 @@
             <h2>Experience</h2>
 
             <div class="job">
+                <h3>Principal Technology Developer · Aviva</h3>
+                <p class="meta">Jul 2026 – Present · Birmingham, UK</p>
+                <ul>
+                    <li>Continuing solution architecture leadership across digital insurance platforms following Aviva's acquisition of Direct Line Group.</li>
+                </ul>
+            </div>
+
+            <div class="job">
                 <h3>Principal Engineer · Direct Line Group</h3>
-                <p class="meta">Feb 2024 – Present · Birmingham, UK</p>
+                <p class="meta">Feb 2024 – Jun 2026 · Birmingham, UK</p>
                 <ul>
                     <li>Solution architecture leadership across customer-facing insurance platforms serving 750,000+ users.</li>
                     <li>Led architecture and delivery of cross-platform integration initiatives — SSO, reusable integration patterns and unified customer access journeys.</li>
@@ -316,24 +355,4 @@
         form.addEventListener("submit", function (e) {
             e.preventDefault();
             var status = document.getElementById("form-status");
-            var data = new FormData(form);
-            fetch(form.action, {
-                method: "POST",
-                body: data,
-                headers: { "Accept": "application/json" }
-            }).then(function (response) {
-                if (response.ok) {
-                    status.textContent = "Thanks — your message has been sent.";
-                    form.reset();
-                } else {
-                    status.textContent = "Something went wrong. Please email me directly.";
-                }
-            }).catch(function () {
-                status.textContent = "Something went wrong. Please email me directly.";
-            });
-        });
-    </script>
-</body>
-
-</html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+ 
